@@ -1,0 +1,535 @@
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/stars.css">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/shootingstar.css">
+  <title>OCULUS QUEST 2</title>
+  <style>
+body{
+  margin: 0px;
+  background:#5e5858;
+}
+/*#1E242A | #5e5858 */
+#main{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+#box1{
+  width: 700px;
+  height: 625px;
+  background-image: url('image/oc2.png');
+  position: absolute;
+  bottom: -100%;
+  left: 30%;
+  animation: anim 2s forwards, anim2 3s forwards 3s;
+  z-index: 2;
+}
+
+#box1:after{
+  content: '';
+  position: absolute;
+  width: 700px;
+  height: 625px;
+  background-image: url('image/oc2.png');
+  left: 0px;
+  z-index: 3;
+}
+
+@keyframes anim{
+  from{
+    bottom:-100%;
+  }
+  to{
+    bottom: 0%;
+  }
+}
+
+@keyframes anim2{
+  from{
+    left:30%;
+    width: 530px; 
+  } 
+  to{
+    width: 0px;
+    left: 50%;
+  }
+}
+
+#box4{
+  width: 1920px;
+  height: 1080px;
+  background-image: url('image/sky.png'); /*Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1282314">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1282314">Pixabay</a>*/
+  position: fixed;
+  bottom: -100%;
+  left: 0%;
+  animation: animB 2s forwards, animG 3s forwards 3s;
+  z-index: 1;
+}
+
+@keyframes animB{
+  from{
+    bottom: -110%;
+  }
+  to{
+    bottom: 0%;
+  }
+}
+
+@keyframes animG{
+  from{
+    left:0%;
+  }
+  to{
+    left: 100%;
+  }
+}
+
+#box5{
+  width: 1920px;
+  height: 1080px;
+  background-image: url(image/bg2.jpg);
+  position: fixed;
+  bottom: -100%;
+  left: 0%;
+  animation: animB2 2s forwards, animG2 3s forwards 3s;
+  z-index: -1;
+}
+
+@keyframes animB2{
+  from{
+    bottom: -110%;
+  }
+  to{
+    bottom: 0%;
+  }
+}
+
+/*Bahnschrift Condensed*/
+#box2{
+  width: auto;
+  height: 400px;
+  font-family:'Ubuntu Condensed', sans-serif;
+  color: white;
+  font-size: 10em;
+  font-weight: 500;
+  line-height: 140px;
+  position: absolute;
+  top: 250px;
+  left: 100px;
+  overflow: hidden;
+}
+
+#text{
+  position: relative;
+  left:-110%;
+  animation: anim3 2s forwards 3s;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@keyframes anim3{
+  from{
+    left: -100%;
+  } 
+  to{
+    left: -2%;
+  }
+}
+
+#box3{
+  overflow: hidden;
+}
+
+#container{
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  animation: anim4 2s forwards 2.5s;
+  z-index: 5;
+  /* background-color: rgb(224, 172, 104); */
+  height: 100px;
+  z-index: 100;
+}
+#logo{
+  float: left;
+  margin-left:100px;
+  margin-top:20px ;
+}
+
+#logo img{
+  width: 100px;
+  transition: transform 0.5s;
+}
+#logo img:hover{
+  transform: scale(0.4);
+}
+
+/*Bahnschrift Condensed*/
+#menu{
+  font-family:'Ubuntu Condensed', sans-serif;
+  font-weight: bold;
+  font-size:14px;
+  color: white;
+  letter-spacing: 2px;
+  margin-right:150px ;
+  margin-top:20px;
+  float: right;
+}
+#menu ul{
+  list-style: none;
+}
+#menu ul li{
+  display: inline-block;
+  margin-left: 100px;
+  text-decoration: none;
+}
+#menu ul li a{
+  -webkit-transition: color 0.4s ease-in-out;
+  -moz-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out ;
+  cursor: pointer;
+  text-decoration: none;
+}
+#menu ul li a:hover{
+  color:#fcd199; 
+  -webkit-transition: color 0.4s ease-in-out;
+  -moz-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out ;
+  cursor: pointer;
+}
+
+#menu ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+#menu ul li a:visited{
+  text-decoration: none;
+}
+
+li:after {    
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: block;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+li:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+#box2 a{
+  text-decoration: none;
+}
+
+#box2 a:visited{
+  text-decoration: none;
+  color: white;
+}
+
+#box2 a:hover{
+  color: black;
+}
+
+@keyframes anim4{
+  from{
+    top:-100%;
+}
+  to{
+    top:0%;
+}
+}
+
+/*Cloud Making*/
+.banner{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: bottom;
+}
+.banner .clouds{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.banner .clouds img{
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  animation: animate calc(8s * var(--i)) linear infinite;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes animate{
+  0%{
+    transform: translateX(-100%)
+}
+  100%{
+    transform: translateX(100%);
+}
+}
+
+canvas{
+  z-index: 1;
+  position: absolute;
+  animation: animS2 2s forwards, animT2 3s forwards 3s;
+  top: 0;
+}
+
+@keyframes animS2{
+  from{
+    top: -400%;
+}
+  to{
+    top: 0%;
+}
+}
+
+</style>
+  </head>
+  <body>
+    <section>
+      <canvas id="canvas"></canvas>
+      <div id="main">
+        <div id="box1"></div>
+        <div id="box4"></div>
+        <div id="box5"></div>
+      </div>
+      <div id="box2">
+        <div id="text">
+          OCULUS<br>QUEST 2
+          <div class="buttons">
+            <div id="containers">
+              <button class="learn-more">
+                <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+                </span>
+                <p class="button-text"><a href="about.html">Learn More</p>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="box3">
+      <div id="container">
+        <div id="logo">
+          <!--<h1 id="logoname">Oculus<br>By Eric</h1>-->
+          <img src="image/logo.png">  <!-- To do -->
+          <div class="night">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+          </div>
+        </div>
+        <div id="menu">
+          <ul>
+            <li><a href='index.html' class="navigation">HOME</li></a>
+            <li><a href='showroom.html' class="navigation">SHOWROOM</li></a>
+            <li><a href='about.html' class="navigation">ABOUT</li></a>
+            <li><a href='review.html' class="navigation">REVIEWS</li></a>
+            <li><a href='explore.html' class="navigation">EXPLORE</li></a>
+          </ul>
+          <div class="night">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+          </div>
+        </div>
+      </div>
+      <section class="clouds">
+        <div class="banner">
+          <div class="clouds">
+            <img src="image/cloud/cloud1.png" style="--i:1;">
+            <img src="image/cloud/cloud2.png" style="--i:2;">
+            <img src="image/cloud/cloud3.png" style="--i:3;">
+            <img src="image/cloud/cloud4.png" style="--i:4;">
+            <img src="image/cloud/cloud5.png" style="--i:5;">
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="content">
+    </sectionS>
+  </body>
+  <script>
+  function Star(id, x, y){
+  this.id = id;
+  this.x = x;
+  this.y = y;
+  this.r = Math.floor(Math.random()*2)+1;
+  var alpha = (Math.floor(Math.random()*10)+1)/10/2;
+  this.color = "rgba(255,255,255,"+alpha+")";
+  }
+  
+  Star.prototype.draw = function() {
+  ctx.fillStyle = this.color;
+  ctx.shadowBlur = this.r * 2;
+  ctx.beginPath();
+  ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+  ctx.closePath();
+  ctx.fill();
+  }
+  
+  Star.prototype.move = function() {
+  this.y -= .15 + params.backgroundSpeed/100;
+  if (this.y <= -10) this.y = HEIGHT + 10;
+  this.draw();
+  }
+  
+  
+  function Dot(id, x, y, r) {
+  this.id = id;
+  this.x = x;
+  this.y = y;
+  this.r = Math.floor(Math.random()*5)+1;
+  this.maxLinks = 2;
+  this.speed = .1;
+  this.a = .5;
+  this.aReduction = .005;
+  this.color = "rgba(255,255,255,"+this.a+")";
+  this.linkColor = "rgba(255,255,255,"+this.a/4+")";
+  
+  this.dir = Math.floor(Math.random()*140)+200;
+  }
+  
+  Dot.prototype.draw = function() {
+  ctx.fillStyle = this.color;
+  ctx.shadowBlur = this.r * 2;
+  ctx.beginPath();
+  ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+  ctx.closePath();
+  ctx.fill();
+  }
+  
+  Dot.prototype.link = function() {
+  if (this.id == 0) return;
+  var previousDot1 = getPreviousDot(this.id, 1);
+  var previousDot2 = getPreviousDot(this.id, 2);
+  var previousDot3 = getPreviousDot(this.id, 3);
+  if (!previousDot1) return;
+  ctx.strokeStyle = this.linkColor;
+  ctx.moveTo(previousDot1.x, previousDot1.y);
+  ctx.beginPath();
+  ctx.lineTo(this.x, this.y);
+  if (previousDot2 != false) ctx.lineTo(previousDot2.x, previousDot2.y);
+  if (previousDot3 != false) ctx.lineTo(previousDot3.x, previousDot3.y);
+  ctx.stroke();
+  ctx.closePath();
+  }
+  
+  function getPreviousDot(id, stepback) {
+  if (id == 0 || id - stepback < 0) return false;
+  if (typeof dots[id - stepback] != "undefined") return dots[id - stepback];
+  else return false;//getPreviousDot(id - stepback);
+  }
+  
+  Dot.prototype.move = function() {
+  this.a -= this.aReduction;
+  if (this.a <= 0) {
+  this.die();
+  return
+  }
+  this.color = "rgba(255,255,255,"+this.a+")";
+  this.linkColor = "rgba(255,255,255,"+this.a/4+")";
+  this.x = this.x + Math.cos(degToRad(this.dir))*(this.speed+params.dotsSpeed/10),
+  this.y = this.y + Math.sin(degToRad(this.dir))*(this.speed+params.dotsSpeed/10);
+  
+  this.draw();
+  this.link();
+  }
+  
+  Dot.prototype.die = function() {
+  dots[this.id] = null;
+  delete dots[this.id];
+  }
+  
+  
+  var canvas  = document.getElementById('canvas'),
+  ctx = canvas.getContext('2d'),
+  WIDTH,
+  HEIGHT,
+  stars = [],
+  StarCount = 200,
+  dots = [],
+  dotsMinDist = 1,
+  params = {
+  dotsSpeed: 0,
+  backgroundSpeed: 0
+  };
+  
+  
+  
+  setCanvasSize();
+  init();
+  
+  function setCanvasSize() {
+  WIDTH = document.documentElement.clientWidth,
+  HEIGHT = 550;                      
+  
+  canvas.setAttribute("width", WIDTH);
+  canvas.setAttribute("height", HEIGHT);
+  }
+  
+  function init() {
+  ctx.strokeStyle = "white";
+  ctx.shadowColor = "white";
+  for (var i = 0; i < StarCount; i++) {
+  stars[i] = new Star(i, Math.floor(Math.random()*WIDTH), Math.floor(Math.random()*HEIGHT));
+  
+  }
+  ctx.shadowBlur = 0;
+  animate();
+  }
+  
+  function animate() {
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
+  
+  for (var i in stars) {
+  stars[i].move();
+  }
+  for (var i in dots) {
+  dots[i].move();
+  }
+  
+  requestAnimationFrame(animate);
+  }
+  
+      
+  </script>
+</html>
