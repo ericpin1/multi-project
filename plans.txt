@@ -1,3 +1,4 @@
+NavBar : HOME | SHOWCASE | EXPLORE | REVIEW | ABOUT
 Find new images(royalty free)
 Make a video ad
 Create a Poster
