@@ -1,4 +1,4 @@
-NavBar : HOME | SHOWCASE | EXPLORE | REVIEW | ABOUT
+NavBar : HOME | SHOWCASE | EXPLORE | REVIEW | ABOUT (Showcase will show 3D model, Explore will show the internals of the oculus quest 2 w/ scrolling animations
 Find new images(royalty free)
 Make a video ad
 Create a Poster
