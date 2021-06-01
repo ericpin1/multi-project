@@ -4,9 +4,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/stars.css">
   <link rel="stylesheet" href="css/button.css">
-  <link rel="stylesheet" href="css/shootingstar.css">
   <title>OCULUS QUEST 2</title>
   <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family:'Ubuntu Condensed', sans-serif;
+}
+
 body{
   margin: 0px;
   background:#5e5858;
@@ -64,7 +73,7 @@ body{
   width: 1920px;
   height: 1080px;
   background-image: url('image/sky.png'); /*Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1282314">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1282314">Pixabay</a>*/
-  position: fixed;
+  position: absolute;
   bottom: -100%;
   left: 0%;
   animation: animB 2s forwards, animG 3s forwards 3s;
@@ -93,7 +102,7 @@ body{
   width: 1920px;
   height: 1080px;
   background-image: url(image/background2.png);
-  position: fixed;
+  position: absolute;
   bottom: -100%;
   left: 0%;
   animation: animB2 2s forwards, animG2 3s forwards 3s;
@@ -110,6 +119,13 @@ body{
 }
 
 /*Bahnschrift Condensed*/
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
 #box2{
   width: auto;
   height: 400px;
@@ -130,6 +146,7 @@ body{
   animation: anim3 2s forwards 3s;
   font-weight: bold;
   font-style: italic;
+  font-size: 150px;
 }
 
 @keyframes anim3{
@@ -155,61 +172,64 @@ body{
   height: 100px;
   z-index: 100;
 }
-#logo{
-  float: left;
-  margin-left:100px;
-  margin-top:20px ;
-}
 
-#logo img{
-  width: 100px;
-  transition: transform 0.5s;
-}
-#logo img:hover{
-  transform: scale(0.4);
-}
 
 /*Bahnschrift Condensed*/
-#menu{
-  font-family:'Ubuntu Condensed', sans-serif;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    /* background-color: #; */
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+  font-size: 1.6rem;
   font-weight: bold;
-  font-size:14px;
-  color: white;
-  letter-spacing: 2px;
-  margin-right:150px ;
-  margin-top:20px;
-  float: right;
+  color: #fff;
+  margin-right:2em ;
 }
-#menu ul{
-  list-style: none;
-}
-#menu ul li{
-  display: inline-block;
-  margin-left: 100px;
-  text-decoration: none;
-}
-#menu ul li a{
+
+.nav-link:hover{
+  color: #fcd199;
   -webkit-transition: color 0.4s ease-in-out;
   -moz-transition: color 0.4s ease-in-out;
   transition: color 0.4s ease-in-out ;
-  cursor: pointer;
-  text-decoration: none;
-}
-#menu ul li a:hover{
-  color:#fcd199; 
-  -webkit-transition: color 0.4s ease-in-out;
-  -moz-transition: color 0.4s ease-in-out;
-  transition: color 0.4s ease-in-out ;
-  cursor: pointer;
 }
 
-#menu ul li a{
-  text-decoration: none;
-  color: white;
+.nav-logo {
+  margin-left: 2em;
+  width: 70px;
+  height: 55px;
+  transition: transform 0.5s;
 }
 
-#menu ul li a:visited{
-  text-decoration: none;
+.nav-logo:hover{
+  transform: scale(0.4);
 }
 
 li:after {    
@@ -225,9 +245,74 @@ li:after {
 }
 
 li:hover:after { 
-  width: 100%; 
+  width: 62.5%; 
   left: 0; 
 }
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+        
+    }
+    .nav-menu.active a{
+      color: black;
+    }
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #box1{
+      display: none;
+    }
+    @keyframes anim2{
+      from{
+      left:0%;
+      width: 530px; 
+    } 
+      to{
+      width: 0px;
+      left: 100%;
+    }
+}
+
+    #text{
+      font-size: 65px;
+    }
+    .star{
+      display: none;
+    }
+    
+}
+
 
 #box2 a{
   text-decoration: none;
@@ -302,6 +387,9 @@ canvas{
 }
 }
 
+.button.text{
+  font-size: 60px;
+}
 </style>
   </head>
   <body>
@@ -333,7 +421,6 @@ canvas{
       <div id="container">
         <div id="logo">
           <!--<h1 id="logoname">Oculus<br>By Eric</h1>-->
-          <img src="image/logo.png">  <!-- To do -->
           <div class="night">
             <div class="star"></div>
             <div class="star"></div>
@@ -350,13 +437,38 @@ canvas{
           </div>
         </div>
         <div id="menu">
-          <ul>
-            <li><a href='index.html' class="navigation">HOME</li></a>
-            <li><a href='showroom.html' class="navigation">SHOWROOM</li></a>
-            <li><a href='about.html' class="navigation">ABOUT</li></a>
-            <li><a href='review.html' class="navigation">REVIEWS</li></a>
-            <li><a href='explore.html' class="navigation">EXPLORE</li></a>
-          </ul>
+            <header class="header">
+                <nav class="navbar">
+                    <img src="image/logo.png" class="nav-logo"></a>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Home</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Showcase</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Explore</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Review</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contact</a>
+                        </li>
+        
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+        </header>
           <div class="night">
             <div class="star"></div>
             <div class="star"></div>
@@ -534,6 +646,24 @@ requestAnimationFrame(animate);
 window.onload = function() {
 document.getElementById("bg_audio").play();
 }   
-      
-  </script>
+// Script for the navbar hamburg
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}  
+</script>
 </html>
