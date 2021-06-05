@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OCULUS | SHOWROOM</title>
+    <title>Document</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script src="https://unpkg.com/focus-visible@5.1.0/dist/focus-visible.js"></script>
     <style>
@@ -92,7 +92,7 @@ a {
 }
 
 .nav-link:hover{
-  color: #fcd199;
+  color: black;
   -webkit-transition: color 0.4s ease-in-out;
   -moz-transition: color 0.4s ease-in-out;
   transition: color 0.4s ease-in-out ;
@@ -138,6 +138,7 @@ li:hover:after {
         transition: 0.3s;
         box-shadow:
             0 10px 27px rgba(0, 0, 0, 0.05);
+        z-index: 85;
     }
 
     .nav-menu.active {
@@ -165,17 +166,6 @@ li:hover:after {
 
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
-    }
-
-    #box1{
-      display: none;
-    }
-
-    #text{
-      font-size: 90px;
-    }
-    .star{
-      display: none;
     }
     
 }
