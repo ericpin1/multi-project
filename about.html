@@ -16,7 +16,7 @@ html{
   padding: 0;
   box-sizing: border-box;
   color: #fff;
-  font-family:'Ubuntu Condensed', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .container {
@@ -58,8 +58,6 @@ html{
   font-size: 1.1rem;
 }
 
-
-
 .filler{
   opacity: 0.5;
 }
@@ -83,8 +81,12 @@ html{
   background-color: #555;
 }
 /* button ends here */
+/* NEW AND IMPROVED NAV*/
+body{
+  background: #5e5858;
+}
 
-/*NavBar*/
+
 li {
   list-style: none;
 }
@@ -95,43 +97,42 @@ a {
 
 #text{
   position: relative;
-  left:-110%;
+  left:-100%;
   animation: anim3 2s forwards 3s;
   font-weight: bold;
   font-style: italic;
 }
-
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.5rem;
-    background: rgb(224, 172, 104);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: rgb(224, 172, 104);
     
 }
 
 .hamburger {
-    display: none;
+  display: none;
 }
 
 .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: white;
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
 }
 
 .nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-item {
-    margin-left: 5rem;
+  margin-left: 5rem;
 }
 
 .nav-link{
@@ -177,49 +178,59 @@ li:hover:after {
   left: 0; 
 }
 @media only screen and (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        left: -110%;
-        top: 5rem;
-        flex-direction: column;
-        background-color: #fff;
-        width: 100%;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow:
-            0 10px 27px rgba(0, 0, 0, 0.05);
-        z-index: 85;
-    }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow:
+        0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 85;
+  }
 
-    .nav-menu.active {
-        left: 0;
-        
-    }
-    .nav-menu.active a{
-      color: black;
-    }
-    .nav-item {
-        margin: 2.5rem 0;
-    }
+  .nav-menu.active {
+      left: 0;
+      
+  }
+  .nav-menu.active a{
+    color: black;
+  }
+  .nav-item {
+      margin: 2.5rem 0;
+  }
 
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
 
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(10px) rotate(45deg);
-    }
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(10px) rotate(45deg);
+  }
 
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+  #container{
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  animation: anim4 2s forwards 2.5s;
+  z-index: 5;
+  /* background-color: rgb(224, 172, 104); */
+  height: 100px;
+  z-index: 100;
+  }
 }
+/*NAV END HERE*/
   </style>
 </head>
 
@@ -244,7 +255,7 @@ li:hover:after {
                   </li>
   
                   <li class="nav-item">
-                      <a href="review.html" class="nav-link">Reviews</a>
+                      <a href="review.html" class="nav-link">Review</a>
                   </li>
   
                   <li class="nav-item">
@@ -257,8 +268,8 @@ li:hover:after {
           <span class="bar"></span>
       </div>
       </nav>
-  </header>
-  </div>
+      </header>
+    </div>
     <div class="container">
       <h2 class="main-title">About.</h2>
       <span class="button"></span>
@@ -298,7 +309,7 @@ li:hover:after {
         main focus in today's future is to advance VR and focus on 
         standalone devices. Improvements are a constant feature we
         live by, to produce quality products, we listen and learn from
-        our dedicated community, We invite <b>YOU</b> to a new future,
+        our dedicated community, We invite <u><b>YOU</b></u> to a new future,
         a new generation, of Technology.
       </p>
     </div>
@@ -353,24 +364,6 @@ function topFunction() {
 
 }
 //Button JS End
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-}
-
-const navLink = document.querySelectorAll(".nav-link");
-
-navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}  
 </script>
 </body>
 </html>
