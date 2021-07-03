@@ -7,75 +7,98 @@
 
     <style>
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #fff;
-    font-family:'Ubuntu Condensed', sans-serif; 
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
 }
-nav {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  padding: 3rem 10rem;
-  justify-content: space-between;
-  background-color: rgb(224, 172, 104);
-  /* rgb(71, 71, 204) */
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(3px);
+body{
+    background: #5e5858;
 }
 
 
+li {
+    list-style: none;
+}
 
-.nav-links a{
-    color:#fff;
+a {
     text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
+}
+
+#text{
+  position: relative;
+  left:-100%;
+  animation: anim3 2s forwards 3s;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#container{
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  animation: anim4 2s forwards 2.5s;
+  z-index: 5;
+  /* background-color: rgb(224, 172, 104); */
+  height: 100px;
+  z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: rgb(224, 172, 104);
     
 }
 
-.nav-links{
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.nav-menu {
     display: flex;
-    width: 35%;
-    justify-content: space-around;
-
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav-links li{
-    list-style: none;
+.nav-item {
+    margin-left: 5rem;
 }
 
-.nav-links ul{
-    list-style: none;
+.nav-link{
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  margin-right:2em ;
+  
 }
 
-.nav-links ul li{
-    display: inline-block;
-
-}
-
-
-.nav-links li a:hover{
+.nav-link:hover{
   color: black;
   -webkit-transition: color 0.4s ease-in-out;
   -moz-transition: color 0.4s ease-in-out;
   transition: color 0.4s ease-in-out ;
-  cursor: pointer;
 }
 
-.nav-links ul li a.navigation:hover{
-  color: black; 
-  -webkit-transition: color 0.4s ease-in-out;
-  -moz-transition: color 0.4s ease-in-out;
-  transition: color 0.4s ease-in-out ;
-  cursor: pointer;
+.nav-logo {
+  margin-left: 2em;
+  width: 70px;
+  height: auto;
+  transition: transform 0.5s;
 }
 
-
-.nav-links ul li a:visited{
-  text-decoration: none;
+.nav-logo:hover{
+  transform: scale(0.4);
 }
 
 li:after {    
@@ -88,29 +111,96 @@ li:after {
   background: #fff;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
-  z-index: 20;
 }
+
 li:hover:after { 
-  width: 100%; 
+  width: 62.5%; 
   left: 0; 
-  z-index: 20;
+}
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+        z-index: 85;
+    }
+
+    .nav-menu.active {
+        left: 0;
+        
+    }
+    .nav-menu.active a{
+      color: black;
+    }
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    #canvas{
+      width: 375px;
+      height: 850px;
+    }
 }
 
 
-</style>
+    </style>
 </head>
 <body>
-    <section>
-        <nav>
-        <h4>Oculus Quest</h4>
-        <ul class="nav-links">
-            <li><a href="index.html" class="navigation">Home</li></a>
-            <li><a href="showroom.html" class="navigation">Showroom</li></a>
-            <li><a href="about.html" class="navigation">About</li></a>
-            <li><a href="review.html" class="navigation">Reviews</li></a>
-            <li><a href="explore.html" class="navigation">Explore</li></a>
-        </ul>
-        </nav>
-    </section>
+  <div id="menu">
+    <header class="header">
+        <nav class="navbar">
+            <img src="image/logo.png" class="nav-logo"></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="showroom.html" class="nav-link">Showcase</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="explore.html" class="nav-link">Explore</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="review.html" class="nav-link">Review</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+    </ul>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    </nav>
+    </header>
+  </div>
 </body>
 </html>
