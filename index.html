@@ -34,7 +34,7 @@ body{
   bottom: -100%;
   left: 30%;
   animation: anim 2s forwards, anim2 3s forwards 3s;
-  z-index: 2;
+  /*z-index: 2;*/
 }
 
 #box1:after{
@@ -45,6 +45,9 @@ body{
   background-image: url('image/ocoglow.png');
   left: 0px;
   z-index: 3;
+  animation-name:floatoc;
+  animation-duration: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes anim{
@@ -67,6 +70,12 @@ body{
   }
 }
 
+@keyframes floatoc{
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }   
+}
+    
 #box4{
   width: 1920px;
   height: 1080px;
