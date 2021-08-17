@@ -34,7 +34,7 @@ body{
   bottom: -100%;
   left: 30%;
   animation: anim 2s forwards, anim2 3s forwards 3s;
-  /*z-index: 2;*/
+
 }
 
 #box1:after{
@@ -45,8 +45,9 @@ body{
   background-image: url('image/ocoglow.png');
   left: 0px;
   z-index: 3;
-  animation-name:floatoc;
-  animation-duration: infinite;
+  animation-name: floatoc;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
@@ -70,16 +71,15 @@ body{
   }
 }
 
-@keyframes floatoc{
+@keyframes floatoc {
   0% { transform: translate(0,  0px); }
   50%  { transform: translate(0, 15px); }
   100%   { transform: translate(0, -0px); }   
 }
-    
 #box4{
   width: 1920px;
   height: 1080px;
-  background-image: url('image/darksky.jpg'); /*Image by https://stock.adobe.com/au/24750409?as_campaign=TinEye&as_content=tineye_match&epi1=24750409&tduid=0728239bbe52a38404588ff0305ea96d&as_channel=affiliate&as_campclass=redirect&as_source=arvato*/
+  background-image: url('image/darksky.jpg'); /*Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1282314">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1282314">Pixabay</a>*/
   position: absolute;
   bottom: -100%;
   left: 0%;
@@ -109,6 +109,7 @@ body{
   width: 1920px;
   height: 1080px;
   background-image: url(image/bgg.gif);
+  background-color: #fcd199;
   position: absolute;
   bottom: -100%;
   left: 0%;
@@ -186,7 +187,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-    background-color:rgb(224, 172, 104);
+    /* background-color: #; */
     
 }
 
@@ -320,7 +321,20 @@ li:hover:after {
     }
 }
 
-
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
 #box2 a{
   text-decoration: none;
 }
@@ -343,8 +357,9 @@ li:hover:after {
 }
 }
 
+
 /*Cloud Making*/
-.banner{
+/* .banner{
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -367,7 +382,7 @@ li:hover:after {
   opacity: 0.1;
   pointer-events: none;
   z-index: -1;
-}
+} */
 
 @keyframes animate{
   0%{
@@ -397,6 +412,7 @@ canvas{
 .button.text{
   font-size: 60px;
 }
+
 </style>
   </head>
   <body>
@@ -461,7 +477,7 @@ canvas{
                         </li>
         
                         <li class="nav-item">
-                            <a href="review.html" class="nav-link">Reviews</a>
+                            <a href="review.html" class="nav-link">Review</a>
                         </li>
         
                         <li class="nav-item">
@@ -487,7 +503,8 @@ canvas{
         </header>
         </div>
       </div>
-      <section class="clouds">
+
+      <!-- <section class="clouds">
         <div class="banner">
           <div class="clouds">
             <img src="image/cloud/cloud1.png" style="--i:1;">
@@ -497,7 +514,7 @@ canvas{
             <img src="image/cloud/cloud5.png" style="--i:5;">
           </div>
         </div>
-      </section>
+      </section> -->
     </section>
     <section class="content">
     </sectionS>
