@@ -36,6 +36,7 @@ html{
   font-size: 6rem;
   transform: translate(-50%, -30%);
   text-decoration: none;
+  color: #000;
 }
 
 .content {
@@ -107,8 +108,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background: rgb(224, 172, 104);
-    
+  /* background: rgb(224, 172, 104); */
 }
 
 .hamburger {
@@ -273,9 +273,9 @@ li:hover:after {
     <div class="container">
       <h2 class="main-title">About.</h2>
       <span class="button"></span>
-      <img src="image/background2.png" class="bg1" alt="" />
-      <img src="image/tbg.png" class="building" alt="" />
-      <img src="image/tbg2.png" class="filler" alt="" />
+      <img src="image/testimageas.jpg" class="bg1" alt="" />
+      <!-- <img src="image/ococrop.png" class="crop" alt="" /> -->
+      <!-- <img src="image/tbg2.png" class="filler" alt="" /> -->
     </div>
     <div class="content">
       <div class="content-images">
@@ -328,8 +328,8 @@ let timeline = new TimelineMax();
 
 timeline
   .to(".filler", 10, { y: -300 })
-  .to(".building", 10, { y: -200 }, "-=10")
-  .fromTo(".bg1", { y: -50 }, { y: 0, duration: 10 }, "-=10")
+  .to(".crop", 10, { y: -200 }, "-=10")
+  .fromTo(".bg1", { y: -80 }, { y: 0, duration: 5 }, "-=10")
   .to(".content", 10, { top: "0%" }, "-=10")
   .fromTo(".content-images", { opacity: 0 }, { opacity: 1, duration: 3 })
   .fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 3 });
