@@ -36,7 +36,6 @@ html{
   font-size: 6rem;
   transform: translate(-50%, -30%);
   text-decoration: none;
-  color: #000;
 }
 
 .content {
@@ -109,6 +108,8 @@ a {
   align-items: center;
   padding: 1rem 1.5rem;
   /* background: rgb(224, 172, 104); */
+  background-color: grey;
+    
 }
 
 .hamburger {
@@ -242,25 +243,25 @@ li:hover:after {
           <nav class="navbar">
               <img src="image/logo.png" class="nav-logo"></a>
               <ul class="nav-menu">
-                  <li class="nav-item">
-                      <a href="index.html" class="nav-link">Home</a>
-                  </li>
-  
-                  <li class="nav-item">
-                      <a href="showroom.html" class="nav-link">Showcase</a>
-                  </li>
-  
-                  <li class="nav-item">
-                      <a href="explore.html" class="nav-link">Explore</a>
-                  </li>
-  
-                  <li class="nav-item">
-                      <a href="review.html" class="nav-link">Review</a>
-                  </li>
-  
-                  <li class="nav-item">
-                      <a href="about.html" class="nav-link">About</a>
-                  </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="explore.html" class="nav-link">Explore</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="review.html" class="nav-link">Review</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
       </ul>
       <div class="hamburger">
           <span class="bar"></span>
@@ -274,8 +275,8 @@ li:hover:after {
       <h2 class="main-title">About.</h2>
       <span class="button"></span>
       <img src="image/background2.png" class="bg1" alt="" />
-      <!-- <img src="image/ococrop.png" class="crop" alt="" /> -->
-      <!-- <img src="image/tbg2.png" class="filler" alt="" /> -->
+      <img src="image/tbg.png" class="building" alt="" />
+      <img src="image/tbg2.png" class="filler" alt="" />
     </div>
     <div class="content">
       <div class="content-images">
@@ -328,8 +329,8 @@ let timeline = new TimelineMax();
 
 timeline
   .to(".filler", 10, { y: -300 })
-  .to(".crop", 10, { y: -200 }, "-=10")
-  .fromTo(".bg1", { y: -80 }, { y: 0, duration: 5 }, "-=10")
+  .to(".building", 10, { y: -200 }, "-=10")
+  .fromTo(".bg1", { y: -50 }, { y: 0, duration: 10 }, "-=10")
   .to(".content", 10, { top: "0%" }, "-=10")
   .fromTo(".content-images", { opacity: 0 }, { opacity: 1, duration: 3 })
   .fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 3 });
