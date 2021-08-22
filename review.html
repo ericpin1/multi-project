@@ -6,7 +6,7 @@
     <title>OCULUS | REVIEWS</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <link rel="shortcut icon" href="https://www.oculus.com/favicon.ico">
     <style>
 html{
     scroll-behavior: smooth;
@@ -20,7 +20,7 @@ html{
 }
 
 .container {
-  height: 110vh;
+  height: 100vh;
 }
 .container img {
   width: 100%;
@@ -35,7 +35,7 @@ html{
   left: 50%;
   font-size: 6rem;
   transform: translate(-50%, -30%);
-  text-decoration: none;
+  color: #000;
 }
 
 .content {
@@ -65,7 +65,7 @@ html{
 }
 
 .content-review-img{
-  border: 5px solid #e0ac68;
+  border: 5px solid #fff;
 }
 
 /* back to top button */
@@ -78,7 +78,7 @@ html{
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: #e0ac68;
+  background-color: #000;
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -101,7 +101,7 @@ h2 a:hover{
 
 /* NEW AND IMPROVED NAV*/
 body{
-  background: #5e5858;
+  background: #fff;
 }
 
 
@@ -126,7 +126,7 @@ a {
   align-items: center;
   padding: 1rem 1.5rem;
   /* background: rgb(224, 172, 104); */
-    
+  color: #fff;
 }
 
 .hamburger {
@@ -140,7 +140,7 @@ a {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: white;
+  background-color: #000;
 }
 
 .nav-menu {
@@ -156,7 +156,7 @@ a {
 .nav-link{
   font-size: 1rem;
   font-weight: bold;
-  color: #fff;
+  color: #000;
   margin-right:2em ;
   
 }
@@ -186,7 +186,7 @@ li:after {
   height: 2px;
   left: 50%;
   position: block;
-  background: #fff;
+  background: #000;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
@@ -194,6 +194,21 @@ li:after {
 li:hover:after { 
   width: 62.5%; 
   left: 0; 
+}
+
+#current{     
+  height: 3px;
+  display: inline-block;
+  background: #000;
+  width: 62.5%;
+  padding-bottom: 20px;
+  padding-top: 1px;
+  padding-left: 5px;
+  padding-right: 15px;
+}
+
+a#current{
+  color: white;
 }
 @media only screen and (max-width: 768px) {
   .nav-menu {
@@ -249,6 +264,7 @@ li:hover:after {
   }
 }
 /*NAV END HERE*/
+
   </style>
 </head>
 
@@ -273,7 +289,7 @@ li:hover:after {
                 </li>
 
                 <li class="nav-item">
-                    <a href="review.html" class="nav-link">Review</a>
+                    <a href="review.html" class="nav-link" id="current">Review</a>
                 </li>
 
                 <li class="nav-item">
@@ -287,16 +303,13 @@ li:hover:after {
       </div>
       </nav>
       </header>
-    </div>
+    </div>    
     <div class="container"> 
       <h2 class="main-title">Reviews.</h2>
       <span class="button"></span>
-      <img src="image/background2.png" class="bg1" alt="background" />
-      <img src="image/tbg.png" class="building" alt="skyscrapers" />
-      <img src="image/tbg2.png" class="filler" alt="null" />
     </div>
-    <div class="content">
-      <div class="content-images">
+    <div class="content" >
+      <div class="content-images" id="content-images">
         <div>
           <img src="image/vergev2.png" alt="The Verge Logo" class="content-review-img" />
           <h4>"Better, Cheaper VR"</h4>
@@ -360,10 +373,7 @@ let controller = new ScrollMagic.Controller();
 let timeline = new TimelineMax();
 
 timeline
-  .to(".filler", 10, { y: -300 })
-  .to(".building", 10, { y: -200 }, "-=10")
-  .fromTo(".bg1", { y: -80 }, { y: 0, duration: 10 }, "-=10")
-  .to(".content", 10, { top: "0%" }, "-=10")
+  .to(".content", 5, { top: "0%" }, "-=10")
   .fromTo(".content-images", { opacity: 0 }, { opacity: 1, duration: 3 })
   .fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 3 });
 
