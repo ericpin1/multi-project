@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oculus | SHOWROOM</title>
-
+    <link rel="shortcut icon" href="https://www.oculus.com/favicon.ico">
     <style>
 html{
     scroll-behavior: smooth;
@@ -92,7 +92,7 @@ a {
   transition: transform 0.5s;
 }
 
-.nav-logo:hover{
+.nav-logo a:hover{
   transform: scale(0.4);
 }
 
@@ -161,17 +161,19 @@ li:hover:after {
 }
 
 .main-title{
-    top: 40%;
-    left: 50%;
-    position: absolute;
-    font-size: 6rem;
-    text-decoration: none;
-    transform: translate(-50%, -30%);
-    color: #fff;
+  top: 40%;
+  left: 50%;
+  position: absolute;
+  font-size: 6rem;
+  text-decoration: none;
+  transform: translate(-50%, -30%);
+  color: #fff;
+  text-decoration: none;
 }
 
+
 .container{
-    height: 110vh;
+  height: 110vh;
 }
 
 /* back to top button */
@@ -195,60 +197,60 @@ li:hover:after {
 }
 /* button ends here */
 .contentimg{
-display: block;
-margin-left: auto;
-margin-right: auto;
-
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 .insidetext{
-    float: left;
-    padding-left: 10em;
-    font-weight: bold;
-    font-size: 1em;
-    display: block;
-    color: #181a1b;
+  float: left;
+  padding-left: 10em;
+  font-weight: bold;
+  font-size: 1em;
+  display: block;
+  color: #181a1b;
 }
 .insidetext p{
-    font-size: 60px;
-    padding-left: 10px;
-    padding-top: 15px;
-    color: #181a1b;
+  font-size: 60px;
+  padding-left: 10px;
+  padding-top: 15px;
+  color: #181a1b;
 }
 .advdesc{
-    margin-top: 16em;
-    padding-left:11em;
-    color: #898989;
-    font-weight: 500;
-    line-height: 25px;
+  margin-top: 16em;
+  padding-left:11em;
+  color: #898989;
+  font-weight: 500;
+  line-height: 25px;
 }
 
 .fillerinc{
-    position: fixed;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100vh;
-    color: black;
-    z-index: 100;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  color: black;
+  z-index: 100;
 }
 
 
 .contentimg2 p{
-    display: fixed;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-    font-weight: bold;
+  display: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  font-weight: bold;
 }
 
 .contentimg2 h1{
-    display: fixed;
-    margin-left: auto;
-    margin-right: auto;
-    width: 19%;
-    font-weight: bold;
-    font-size: 60px;
-    line-height: 88%;
+  display: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  width: 19%;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 88%;
 }
 .content {
   width: 100%;
@@ -259,10 +261,10 @@ margin-right: auto;
 }
 
 .float{
-    animation-name: floatoc;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+  animation-name: floatoc;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 @keyframes floatoc {
   0% { transform: translate(0,  0px); }
@@ -329,24 +331,53 @@ margin-right: auto;
 }
 
 .but a{
-    position: absolute;
-    bottom: 20px;
-    left: 48%;
-    z-index: 2;
-    display: inline-block;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    color: #000;
-    font : normal 400 20px/1 'Josefin Sans', sans-serif;
-    letter-spacing: .1em;
-    text-decoration: none;
-    transition: opacity .3s;
+  position: absolute;
+  bottom: 20px;
+  left: 48%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #000;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
 }
 
 #blur{
-    filter: blur(20px);
+  filter: blur(20px);
 }
-    </style>
+
+a#current{
+  color: #fff;
+}
+
+#current{
+  height: 3px;
+  display: inline-block;
+  background: #000;
+  width: 62.5%;
+  padding-bottom:15px;
+  padding-top: 1px;
+  padding-left: 3px;
+  padding-right: 4px;
+}
+.socials{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 15%;
+  height: 5%;
+  /* text-align: justify; */
+  transform: translateY(-40em);
+  transition: transform 0.5s;
+}
+
+.socials a:hover{
+  transform: scale(1.5);
+}
+</style>
 </head>
 <body>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Up</button>
@@ -373,7 +404,7 @@ margin-right: auto;
               </li>
 
               <li class="nav-item">
-                  <a href="contact.html" class="nav-link">Contact</a>
+                  <a href="contact.html" class="nav-link" id="current">Contact</a>
               </li>
     </ul>
     <div class="hamburger">
@@ -391,10 +422,15 @@ margin-right: auto;
         <source src="image/Introducing Oculus Quest 2.mp4" type="video/mp4">
         Your Browser Does Not Support The Video Tag
         </video>
-        <h2 class="main-title" style="color: #000;">CONTACT US.</h2>
+        <h2 class="main-title" style="color: #000;">Contact Us.</h2>
         <span class="button"></span>
         <!-- <img src="image/background2.png" class="bg1" alt="background image"> -->
   </div>
+  </section>
+  <section class="socials">
+    <a href="https://twitter.com/oculus" target="_blank"><img src="image/twitter.png" alt="Twitter"></a>
+    <a href="https://www.instagram.com/oculus/?hl=en" target="_blank"><img src="image/instagram.png" alt="Instagram" class="midlogo"></a>
+    <a href="https://www.facebook.com/Oculusvr/" target="_blank"><img src="image/facebook.png" alt="Facebook"></a>
   </section>
   <section id="sect2" class="but">
   
