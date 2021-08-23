@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oculus | SHOWROOM</title>
+    <title>Oculus | CONTACT</title>
     <link rel="shortcut icon" href="https://www.oculus.com/favicon.ico">
     <style>
 html{
@@ -357,7 +357,7 @@ a#current{
   padding-bottom:15px;
   padding-top: 1px;
   padding-left: 3px;
-  padding-right: 4px;
+  padding-right: 7px;
 }
 .socials{
   display: flex;
@@ -373,6 +373,64 @@ a#current{
 .socials a:hover{
   transform: scale(1.5);
 }
+
+/*Accordion style*/
+.accordion {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  padding: 25px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+  border-top: 1px solid #000;
+  font-weight: bold;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.box {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  margin-left: 2em;
+}
+
+.but p{
+  color: #666;
+  font-size: 20px;
+
+}
+
+#container{
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+#container a{
+  all: unset;
+}
 </style>
 </head>
 <body>
@@ -384,23 +442,23 @@ a#current{
             <img src="image/logoblk.png" class="nav-logo"></a>
             <ul class="nav-menu">
               <li class="nav-item">
-                  <a href="index.html" class="nav-link">Home</a>
+                  <a href="index.html" class="nav-link">HOME</a>
               </li>
 
               <li class="nav-item">
-                  <a href="about.html" class="nav-link">About</a>
+                  <a href="about.html" class="nav-link">ABOUT</a>
               </li>
 
               <li class="nav-item">
-                  <a href="explore.html" class="nav-link">Explore</a>
+                  <a href="explore.html" class="nav-link">EXPLORE</a>
               </li>
 
               <li class="nav-item">
-                  <a href="review.html" class="nav-link">Review</a>
+                  <a href="review.html" class="nav-link">REVIEW</a>
               </li>
 
               <li class="nav-item">
-                  <a href="contact.html" class="nav-link" id="current">Contact</a>
+                  <a href="contact.html" class="nav-link" id="current">CONTACT</a>
               </li>
     </ul>
     <div class="hamburger">
@@ -429,30 +487,73 @@ a#current{
     <a href="https://www.facebook.com/Oculusvr/" target="_blank"><img src="image/facebook.png" alt="Facebook"></a>
   </section>
   <section id="sect2" class="but">
-  
-  <div class="contentoverview">
-      <div class="fillerinc"></div>
-      <div class="contentimg">
-          <img src="image/ocoinside.png" alt="oculus disessembled" style="width: 1812px; height: 1167px;">
-          <h1 class="insidetext">PROCESSING<p>ADVANCED <br>PROCESSING<br> POWER</p></h1> 
-          <br>
-          <p class="advdesc">6GB RAM combined with the new <br>Qualcomm® Snapdragon™ XR2 <br>Platform ensures a smooth <br>performance.</p>
+  <h1 style="text-align: center;font-size: 100px; padding-top: 1em;">FAQ</h1>
+    <div id="container">
+      <button class="accordion">Do You Need a Phone for Oculus Quest 2?</button>
+      <div class="box">
+        <p style="line-height: 1.6;padding-bottom: 1em;">Yes, to set up your Oculus Quest 2 or Quest, you'll need a smartphone with the Oculus companion app. The minimum OS requirements for phones to run the Oculus companion app are: <br>Apple i0S 10+ <br>Android 5.0+</p>
       </div>
-      <div class="contentimg2">
-          <img src="image/controlright.png" class="float" alt="Right controller of The Oculus" style="width: 708px;float: right;">
-          <img src="image/controlleft.png" class="float" alt="Left controller of The Oculus" style="width: 708px;float: left;padding-top: 10em;">
-          <p>CONTROLLERS</p>
-          <h1 style="padding-top: 20px;">MOVEMENT,<br>PERFECTED</h1>
-          <p style="font-size: 16px;color:#898989;font-weight: 540;padding-top: 1em;line-height: 25px;">Take VR into your own hands with<br>the redesigned Oculus Touch<br>controllers, complete with state-of-<br>the-art hand tracking.</p>
+      
+      <button class="accordion">What’s the difference between Turning my Oculus Quest 2 or Quest Off and Putting it to Sleep?</button>
+      <div class="box">
+        <p style="line-height: 2; font-weight: 500;">When you’re not using your Oculus Quest 2 or Quest, it can either be put to sleep or turned off entirely.</p>
+        <p style="font-weight: bold; line-height: 2;color: rgb(80, 80, 80);">Putting Your Headset to Sleep</p>
+        <p style="line-height: 1.6;">Putting your headset to sleep means that it will automatically “wake up” when it senses that the headset has been placed on someone’s head.
+                                      When your headset is in sleep mode, power will still drain from the device, although much more slowly than when it’s in use.</p>
+        <p style="padding-top: 1em; line-height: 1.6;">You can put your headset to sleep by pressing the power button on your headset. You can wake it back up by placing the headset on your head.</p>
+        <p style="padding-top: 1em; font-weight: bold; color: rgb(80, 80, 80); line-height: 2;">Turning your headset off</p>
+        <p style="line-height: 1.6;padding-bottom: 1em;">Turning your headset off means that the system is completely off, and will only turn on when the power button is held. When your <br> 
+                                    headset is turned off, much less power will be drained than if it were in sleep mode.</p>
+        <p style="line-height: 2;padding-bottom: 1em;">You can turn your Quest or Quest 2 off by holding down the power button for at least three seconds until the indicator light turns off.</p>
       </div>
-      <div class="contentimg3">
-          <img src="image/ocoexplore.png" class="float" alt="Oculus Quest 2 Showcase" style="width: 806px; float: right;">
-          <p style="display:block;padding-top:20em;width: 20%;margin-left: 10em;font-weight: bold;">DISPLAY</p>
-          <h1 style="margin-left: 180px;padding-top: 20px;font-size: 60px;">50% MORE <br>PIXELS FOR <br>SEAMLESS <br>GRAPHICS*</h1>
-          <p style="display:block;padding-top:20px;width: 20%;margin-left: 10em;color:#898989;font-weight: 540;line-height: 25px;">Enjoy the incredible resolution of<br>1823x1920px per eye. With<br>enhanced clarity you can stay<br>focused whether you're on the<br>move or standing still.</p>
+      
+      
+      <button class="accordion">How do I properly set up the Oculus Quest 2?</button>
+      <div class="box">
+        <p style="font-weight: bold;color: rgb(80, 80, 80);line-height: 2;">Charge your headset</p>
+        <p style="line-height: 1.6;">Plug the charging cord into your Oculus Quest Headset and a power source to begin charging it. The charging indicator turns green once it's fully charged.</p>
+        <p style="font-weight: bold;color: rgb(80, 80, 80);line-height:2;">Adjust your headset</p>  
+        <p style="padding-left: 1em;padding-bottom: 1em;"><b style="color: black;">1. </b>Loosen the <b style="color: rgb(80, 80, 80);">side straps</b> and then the <b style="color: rgb(80, 80, 80);">top strap.</b></p>
+        <p style="padding-left: 1em;padding-bottom: 1em;"><b style="color: black;">2. </b>Starting from the back, put your headset.</p>
+        <p style="padding-left: 3em;padding-bottom: 1em;">• Make sure to pull the back strap down until it cradles the base of your head.</p>
+        <p style="padding-left: 3em;padding-bottom: 1em;">• If you're wearing glasses, put on the headset from the front first</p>
+        <p style="padding-left: 1em;padding-bottom: 2em;"><b style="color: black;">3. </b>Tighten the <b style="color: rgb(80, 80, 80);">side tabs </b>and then <b style="color: rgb(80, 80, 80);">top strap.</b></p>
+        <p style="font-weight: bold;color: rgb(80, 80, 80);line-height:2;">Adjust your view</p> 
+        <p style="padding-bottom: 0.5em;">•‎‎‏‏‎&emsp;With your hands holding both sides of your headset, slowly move your Oculus Quest up and down until the picture is clear and the‎</p>
+        <p style="padding-bottom: 1em;">‏‏‎ ‎&emsp;headset feels comfortable.</p>
+        <p style="padding-bottom: 1em;">•‎‎‏‏‎&emsp;If you wear glasses, insert the glasses spacer into your Oculus Quest headset prior to using it.‎</p>
+        <p style="padding-bottom: 0.5em;">•‎‎‏‏‎&emsp;If the image in your headset isn't clear, you can use your left thumb to move the image slider on the left of the bottom of your headset‎</p>
+        <p style="padding-bottom: 1em;">‏‏‎ ‎&emsp;to the left and right until the image is clear.</p>
+        <p style="padding-bottom: 1em;">Once your headset is adjusted, follow the instructions in-VR and in the Oculus mobile app to complete the setup process.</p>
+        <p style="font-weight: bold;color: rgb(80, 80, 80);line-height:2;">Troubleshooting</p>
+        <p style="line-height: 1.6;padding-bottom: 1em;">If you're having trouble completing the setup process, make sure your Wi-Fi signal is strong. If you have a weak signal, try moving to another location. 
+        Quest must be set up on a secure, password protected network. Unsecured networks can't be used for the setup process. Your Wi-Fi network can't use captive portals.</p>
+        <p>Problems still arising after following these procedures?<a href="https://support.oculus.com/articles/contact-us/contact-us/index-contact-us" target="blank" style="cursor: pointer;color: #1d65c1;"> contact Customer Support</a></p>
+      </div>
+
+      <button class="accordion">Can You Charge the Oculus Quest 2 While Using it?</button>
+      <div class="box">
+        <p style="padding-bottom: 1em;">Simple answer, Yes of course! Oculus Quest 2 delievers optimal battery life aswell as compatibility to be used while on charge.</p>
+        <p style="padding-bottom: 1em;">Through the use of <b style="color: rgb(80, 80, 80);">Oculus Link</b>, the USB 3.0 cable offers high speed data transfers and power to the Oculus Quest 2.</p>
+        <p style="font-weight: bold;color: rgb(80, 80, 80);line-height:2;">Setup</p> 
+      </div>
+
+      <button class="accordion">How Long Does it Take to Charge Oculus Quest 2?</button>
+      <div class="box">
+        <p>To be added</p>
+      </div>
+
+      <button class="accordion">Can You Charge Oculus Quest 2 Overnight?</button>
+      <div class="box">
+        <p>To be added</p>
+      </div>
+
+      <button class="accordion">Is the Oculus Quest 2 Worth it?</button>
+      <div class="box">
+        <p>To be added</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 <script>
 //Button JS starts
 var mybutton = document.getElementById("myBtn");
@@ -482,6 +583,25 @@ $(function() {
     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
   });
 });
+
+
+</script>
+<script>
+//Accordion script
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
 </script>
 </body>
 </html>
