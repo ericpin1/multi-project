@@ -15,7 +15,6 @@ html{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fff;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -84,9 +83,7 @@ html{
 }
 /* button ends here */
 /* NEW AND IMPROVED NAV*/
-body{
-  background: #fff;
-}
+
 
 
 li {
@@ -109,10 +106,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
-  /* background: rgb(224, 172, 104); */
-  background-color: #FFF;
-    
+  padding: 1rem 1.5rem;    
 }
 
 .hamburger {
@@ -126,7 +120,6 @@ a {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: white;
 }
 
 .nav-menu {
@@ -201,7 +194,6 @@ a#current{
     left: -100%;
     top: 5rem;
     flex-direction: column;
-    background-color: #fff;
     width: 100%;
     border-radius: 10px;
     text-align: center;
@@ -323,7 +315,9 @@ a#current{
   z-index: 1;
 }
 
-
+#blur{
+  filter: blur(20px);
+}
 </style>
 </head>
 
@@ -366,6 +360,10 @@ a#current{
     </div>
     <section class="but" id="sect1">
     <div class="container">
+      <video id="blur" width="1920" height="1080" autoplay="true" muted="muted" loop="loop" volume="0">
+        <source src="image/Introducing Oculus Quest 2.mp4" type="video/mp4">
+        Your Browser Does Not Support The Video Tag
+      </video>
       <h2 class="main-title">About.</h2>
       <span class="button"></span>
       <a href="#sect2" onClick="scrollToBottom()"><span></span>Scroll</a>
