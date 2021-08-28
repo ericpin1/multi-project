@@ -249,11 +249,87 @@ a#current{
   }
 }
 /*NAV END HERE*/
-  </style>
+/*scroll down*/
+
+#sect1 a {
+  padding-top: 80px;
+}
+#sect1 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sec1 2s infinite;
+  animation: sec1 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+#sect1 a span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+#sect1 a span:nth-of-type(2) {
+  top: 16px;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+#sect1 a span:nth-of-type(3) {
+  top: 32px;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+@-webkit-keyframes sec1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sec1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.but a{
+  position: absolute;
+  bottom: 100px;
+  left: 48%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #000;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+  z-index: 1;
+}
+
+
+</style>
 </head>
 
 <body>
   <section>
+
     <button onclick="topFunction()" id="myBtn" title="Go to top">Up</button>
     <div id="menu">
       <header class="header">
@@ -277,7 +353,7 @@ a#current{
                 </li>
 
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link">CONTACT</a>
+                    <a href="contact.html" class="nav-link">CONNECT</a>
                 </li>
       </ul>
       <div class="hamburger">
@@ -288,12 +364,14 @@ a#current{
       </nav>
       </header>
     </div>
+    <section class="but" id="sect1">
     <div class="container">
       <h2 class="main-title">About.</h2>
       <span class="button"></span>
-
+      <a href="#sect2" onClick="scrollToBottom()"><span></span>Scroll</a>
     </div>
-    <div class="content">
+  </section>
+    <div class="content" id="sect2">
       <div class="content-images">
         <div>
           <img src="image/previewabout2.png" alt="" />
@@ -355,9 +433,9 @@ let scene = new ScrollMagic.Scene({
   duration: "300%",
   triggerHook: 0,
 })
-  .setTween(timeline)
-  .setPin("section")
-  .addTo(controller);
+.setTween(timeline)
+.setPin("section")
+.addTo(controller);
 
 //Button JS starts
 var mybutton = document.getElementById("myBtn");
@@ -380,6 +458,13 @@ function topFunction() {
 
 }
 //Button JS End
+</script>
+<script>
+scrollingElement = (document.scrollingElement || document.body)
+
+function scrollToBottom () {
+  scrollingElement.scrollTop = scrollingElement.scrollHeight;
+}
 </script>
 </body>
 </html>
