@@ -91,7 +91,7 @@ button:hover .circle .icon.arrow {
 }
 
 button:hover .button-text {
-	color: #282936; /*color: #fff*/
+	color: #000; /*color: #fff*/
 	
 }
 
@@ -107,5 +107,8 @@ button:hover .button-text {
 		align-self: center;
 		justify-content: center;
 		text-align: center;
+		padding-top: 37em;
+		padding-left: 20em;
+		z-index: -9999;
 }
 }
