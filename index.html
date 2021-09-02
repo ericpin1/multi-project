@@ -507,7 +507,6 @@ canvas{
   background: #222222;
   font-size: 31px;
   font-weight: bold;
-  display: inline-block;
   line-height: 0px;
   padding: 11px 3px;
   position: absolute;
@@ -528,6 +527,7 @@ canvas{
 .button-text a:hover{
   color: #000;
 }
+
 </style>
   </head>
   <body>
@@ -541,6 +541,7 @@ canvas{
         <div id="box4"></div>
         <div id="box5"></div>
       </div>
+
       <div id="box2">
         <div id="text">
           OCULUS<br>QUEST 2
@@ -864,5 +865,16 @@ function lightbox_close() {
   vid.volume = 0.1;
 }
   
+</script>
+<script>
+function muteaudio(){
+  var vid = document.getElementById("bg_audio");
+  vid.volume = 0;
+}
+
+function unmuteaudio(){
+  var vid = document.getElementById("bg_audio");
+  vid.volume = 0.1;
+}
 </script>
 </html>
